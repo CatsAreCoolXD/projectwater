@@ -4,6 +4,5 @@ h1 {
 }
 
 body {
-    background-color: green;
-    opacity: 0.6;
+    background-color: hsla(234, 100%, 25%, 0.601);
 }
