@@ -2,3 +2,7 @@ h1 {
     color: gray;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+body {
+    background-color: hsla(210, 100%, 25%, 0.5);
+}
