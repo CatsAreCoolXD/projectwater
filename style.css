@@ -2,3 +2,8 @@ h1 {
     color: gray;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+#groote{
+    width: 90px;
+    height: 40px;
+}
