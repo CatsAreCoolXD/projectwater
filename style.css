@@ -2,3 +2,8 @@ h1 {
     color: gray;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+body {
+    background-color: green;
+    opacity: 0.6;
+}
