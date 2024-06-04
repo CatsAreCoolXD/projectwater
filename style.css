@@ -3,7 +3,12 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+<<<<<<< HEAD
 #groote{
     width: 90px;
     height: 40px;
+=======
+body {
+    background-color: hsla(234, 100%, 25%, 0.601);
+>>>>>>> f2c079262ec91a228e8cd95571a8488608b238b6
 }
