@@ -1,8 +1,15 @@
 h1 {
-    color: gray;
+    color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 body {
-    background-color: hsla(210, 100%, 25%, 0.5);
+    background-color: hsla(181, 100%, 50%, 0.5);
 }
