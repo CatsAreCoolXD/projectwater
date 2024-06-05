@@ -4,6 +4,7 @@ h1 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #groote{
     width: 90px;
     height: 40px;
@@ -11,4 +12,13 @@ h1 {
 body {
     background-color: hsla(234, 100%, 25%, 0.601);
 >>>>>>> f2c079262ec91a228e8cd95571a8488608b238b6
+=======
+h2 {
+    color: gray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: hsla(210, 100%, 25%, 0.5);
+>>>>>>> 6d7da15e3e5a98b9585e6e0a94a1927bb74ac47b
 }
