@@ -27,6 +27,14 @@ body {
     background-color: hsla(181, 100%, 50%, 0.5);
 }
 
+article {
+  border: 3px solid black;
+  border-radius: 0px 20px 20px 20px;
+  margin: 5px 10px 5px 10px;
+  padding: 10px;
+  background: white;
+}
+
 /* The sidebar menu */
 .sidebar {
     height: 100%; /* 100% Full-height */
