@@ -17,6 +17,12 @@ h2 {
     text-align: center;
 }
 
+p {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
 body {
     background-color: hsla(181, 100%, 50%, 0.5);
 }
