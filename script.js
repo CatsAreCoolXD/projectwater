@@ -3,15 +3,16 @@ const geoApiKey = "AIzaSyDs27PExzWmcaIgSb9vFWcos8bvh30g-OI";
 const cityId = "Amsterdam";
 let lat;
 let lon;
-let outputText = document.getElementById("outputText");
+var outputText = document.getElementById("outputtext");
+var output = 0;
 function definePosition(position){
   lat = position.coords.latitude;
   lon = position.coords.longitude;
 }
 
-function setTexts(prec, factor, dakSize, citySize){
-  console.log("Output is " + prec + " x " + factor + " = " + prec);
-  outputText.innerHTML = prec*factor*(citySize/dakSize);
+function setTexts(prec, dakSize){
+  output = Math.round(prec*dakSize);
+  outputText.innerHTML = "Jouw dak zou " + output + " liter water opvangen per jaar!";
 }
 
 navigator.geolocation.getCurrentPosition(definePosition);
@@ -25,9 +26,7 @@ function getData(){
   let sDay = "";
   let apiString = "";
   console.log(apiString);
-  let citySize = parseFloat(document.getElementById("stadSize").innerHTML);
   let dakSize = parseFloat(document.getElementById("dakSize").innerHTML);
-  let factor = dakSize/citySize;
   var output = 0.0;
   let text = document.getElementById("outputtext");
   text.innerHTML = "Berekenen...";
@@ -51,8 +50,7 @@ function getData(){
         success: function(data){
           let dat = data.forecast.forecastday["0"].day.totalprecip_mm;
           prec += dat;
-          text.innerHTML = prec*factor;
-          setTexts(prec, factor, dakSize,citySize);
+          setTexts(prec, dakSize);
         }
     });
     console.log("Call");
