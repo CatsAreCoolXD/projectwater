@@ -22,7 +22,7 @@ function definePosition(position){
 var a = 0.01;
 var o = 0;
 function setTexts(prec, dakSize, x){
-  if (x>dagen-2){
+  if (true){
     output = Math.round(prec*dakSize);
     outputText.innerHTML = "Er valt per jaar " + output + " liter water op jouw dak!";
     bekers = output;
