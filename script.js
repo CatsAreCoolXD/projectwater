@@ -5,6 +5,11 @@ let lat;
 let lon;
 var outputText = document.getElementById("outputtext");
 var output = 0;
+var bekers;
+var baden;
+var douchen;
+var wasmachine;
+var toilet;
 function definePosition(position){
   lat = position.coords.latitude;
   lon = position.coords.longitude;
@@ -13,6 +18,11 @@ function definePosition(position){
 function setTexts(prec, dakSize){
   output = Math.round(prec*dakSize);
   outputText.innerHTML = "Jouw dak zou " + output + " liter water opvangen per jaar!";
+  bekers = output;
+  baden = output/110;
+  douchen = output/360;
+  wasmachine = output/60;
+  toilet = output/7;
 }
 
 navigator.geolocation.getCurrentPosition(definePosition);
@@ -26,7 +36,7 @@ function getData(){
   let sDay = "";
   let apiString = "";
   console.log(apiString);
-  let dakSize = parseFloat(document.getElementById("dakSize").innerHTML);
+  let dakSize = parseFloat(document.getElementById("dakSize").value);
   var output = 0.0;
   let text = document.getElementById("outputtext");
   text.innerHTML = "Berekenen...";
