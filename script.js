@@ -4,6 +4,10 @@ const cityId = "Amsterdam";
 let lat;
 let lon;
 var outputText = document.getElementById("outputtext");
+var badText = document.getElementById("bad");
+var douchText = document.getElementById("douch");
+var wasText = document.getElementById("was");
+var toiletText = document.getElementById("wc");
 var output = 0;
 var bekers;
 var baden;
@@ -19,11 +23,15 @@ function setTexts(prec, dakSize){
   output = Math.round(prec*dakSize);
   outputText.innerHTML = "Jouw dak vangt " + output + " liter water op per jaar!";
   bekers = output;
-  baden = output/110;
-  douchen = output/360;
-  wasmachine = output/60;
-  toilet = output/7;
-  console.log("baden"+baden+" douchen"+douchen+" wasmachine"+wasmachine+" toilet"+toilet);
+  baden = Math.round(output/110);
+  douchen = Math.round(output/360);
+  wasmachine = Math.round(output/60);
+  toilet = Math.round(output/7);
+  badText.innerHTML = "Dat zijn gemiddeld "+baden+" baden!";
+  douchText.innerHTML = "Dat is gemiddeld "+douchen+" uur douchen!";
+  wasText.innerHTML = "Dat zijn gemiddeld "+wasmachine+" wasmachine sessies!";
+  toiletText.innerHTML = "Dat is gemiddeld "+toilet+" keer je wc doorspoelen!";
+  console.log("baden="+baden+" douchen="+douchen+" wasmachine="+wasmachine+" toilet="+toilet);
 }
 
 navigator.geolocation.getCurrentPosition(definePosition);
