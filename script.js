@@ -19,19 +19,22 @@ function definePosition(position){
   lat = position.coords.latitude;
   lon = position.coords.longitude;
 }
-
+var a = 0.01;
+var o = 0;
 function setTexts(prec, dakSize, x){
-  output = Math.round(prec*dakSize);
-  outputText.innerHTML = "Er valt per jaar " + output + " liter water op jouw dak!";
-  bekers = output;
-  baden = Math.round(output/110);
-  douchen = Math.round(output/360);
-  wasmachine = Math.round(output/60);
-  toilet = Math.round(output/7);
-  badText.innerHTML = "Dat zijn gemiddeld "+baden+" baden!";
-  douchText.innerHTML = "Dat is gemiddeld "+douchen+" uur douchen!";
-  wasText.innerHTML = "Dat zijn gemiddeld "+wasmachine+" wasmachine sessies!";
-  toiletText.innerHTML = "Dat is gemiddeld "+toilet+" keer je wc doorspoelen!";
+  if (x==dagen-1){
+    output = Math.round(prec*dakSize);
+    outputText.innerHTML = "Er valt per jaar " + output + " liter water op jouw dak!";
+    bekers = output;
+    baden = Math.round(output/110);
+    douchen = Math.round(output/360);
+    wasmachine = Math.round(output/60);
+    toilet = Math.round(output/7);
+    badText.innerHTML = "Dat zijn gemiddeld "+baden+" baden!";
+    douchText.innerHTML = "Dat is gemiddeld "+douchen+" uur douchen!";
+    wasText.innerHTML = "Dat zijn gemiddeld "+wasmachine+" wasmachine sessies!";
+    toiletText.innerHTML = "Dat is gemiddeld "+toilet+" keer je wc doorspoelen!";
+  }
 }
 
 navigator.geolocation.getCurrentPosition(definePosition);
@@ -78,10 +81,8 @@ function getData(){
 
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
 }
   
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
 }
