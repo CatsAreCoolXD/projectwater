@@ -14,12 +14,13 @@ var baden;
 var douchen;
 var wasmachine;
 var toilet;
+var dagen = 335;
 function definePosition(position){
   lat = position.coords.latitude;
   lon = position.coords.longitude;
 }
 
-function setTexts(prec, dakSize){
+function setTexts(prec, dakSize, x){
   output = Math.round(prec*dakSize);
   outputText.innerHTML = "Er valt per jaar " + output + " liter water op jouw dak!";
   bekers = output;
@@ -46,7 +47,7 @@ function getData(){
   let text = document.getElementById("outputtext");
   text.innerHTML = "Berekenen...";
   var prec = 0;
-  for (let x = 0; x < 335; x++){
+  for (let x = 0; x < dagen; x++){
     if (true){
       day += 1;
       if (day > 28){
@@ -65,7 +66,7 @@ function getData(){
         success: function(data){
           let dat = data.forecast.forecastday["0"].day.totalprecip_mm;
           prec += dat;
-          setTexts(prec, dakSize);
+          setTexts(prec, dakSize, x);
         }
     });
     console.log("Call");
