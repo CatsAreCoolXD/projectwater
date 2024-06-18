@@ -21,7 +21,7 @@ function definePosition(position){
 
 function setTexts(prec, dakSize){
   output = Math.round(prec*dakSize);
-  outputText.innerHTML = "Jouw dak vangt " + output + " liter water op per jaar!";
+  outputText.innerHTML = "Er valt per jaar " + output + " liter water op jouw dak!";
   bekers = output;
   baden = Math.round(output/110);
   douchen = Math.round(output/360);
@@ -31,7 +31,6 @@ function setTexts(prec, dakSize){
   douchText.innerHTML = "Dat is gemiddeld "+douchen+" uur douchen!";
   wasText.innerHTML = "Dat zijn gemiddeld "+wasmachine+" wasmachine sessies!";
   toiletText.innerHTML = "Dat is gemiddeld "+toilet+" keer je wc doorspoelen!";
-  console.log("baden="+baden+" douchen="+douchen+" wasmachine="+wasmachine+" toilet="+toilet);
 }
 
 navigator.geolocation.getCurrentPosition(definePosition);
@@ -41,12 +40,9 @@ function getData(){
   let day = 18;
   let month = 6;
   let year = 2023;
-  let sMonth = "";
-  let sDay = "";
   let apiString = "";
   console.log(apiString);
   let dakSize = parseFloat(document.getElementById("dakSize").value);
-  var output = 0.0;
   let text = document.getElementById("outputtext");
   text.innerHTML = "Berekenen...";
   var prec = 0;
@@ -79,13 +75,11 @@ function getData(){
     
 }
 
-/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
   }
   
-/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
