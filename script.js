@@ -17,19 +17,20 @@ function definePosition(position){
 
 function setTexts(prec, dakSize){
   output = Math.round(prec*dakSize);
-  outputText.innerHTML = "Jouw dak zou " + output + " liter water opvangen per jaar!";
+  outputText.innerHTML = "Jouw dak vangt " + output + " liter water op per jaar!";
   bekers = output;
   baden = output/110;
   douchen = output/360;
   wasmachine = output/60;
   toilet = output/7;
+  console.log("baden"+baden+" douchen"+douchen+" wasmachine"+wasmachine+" toilet"+toilet);
 }
 
 navigator.geolocation.getCurrentPosition(definePosition);
 function getData(){
   lat = 25.300;
   lon = 91.583;
-  let day = 17;
+  let day = 18;
   let month = 6;
   let year = 2023;
   let sMonth = "";
