@@ -145,8 +145,25 @@ kaas{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   font-size: 20px;
+
 }
 #foto {
   width: 1000px;
   height: 700px;
+}
+
+#infoplop {
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: rgb(76, 73, 147);
+  border: 3px solid rgb(121, 181, 255);
+  border-radius: 2px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 20px; 
 }
