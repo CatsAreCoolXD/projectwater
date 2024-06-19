@@ -150,7 +150,7 @@ kaas{
   border: 3px solid rgb(0, 152, 152);
   border-radius:15px;
   font-size: 20px;
-
+  opacity: 60%
 }
 #submit:hover {
   border: 3px solid black;
@@ -163,6 +163,7 @@ kaas{
 
 .infoplop {
   width: 500px;
+  height: 225px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -175,6 +176,7 @@ kaas{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   font-size: 20px; 
+  opacity: 70%;
 }
 .infoplop2 {
   width: 1000px;
@@ -190,8 +192,17 @@ kaas{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   font-size: 20px; 
+  opacity: 70%
 }
 
 h5 {
   text-align: center;
+}
+#titel {
+  border: 3px solid teal;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(1, 164, 164);
+  border-radius: 50px;
 }
