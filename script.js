@@ -1,4 +1,4 @@
-const apiKey = "be3b9fcb975540c2bb4132502240506";
+const apiKey = "1f0860c95f614d67ae472540241906";
 const geoApiKey = "AIzaSyDs27PExzWmcaIgSb9vFWcos8bvh30g-OI";
 const cityId = "Amsterdam";
 let lat;
@@ -41,7 +41,7 @@ navigator.geolocation.getCurrentPosition(definePosition);
 function getData(){
   lat = 25.300;
   lon = 91.583;
-  let day = 18;
+  let day = 19;
   let month = 6;
   let year = 2023;
   let apiString = "";
@@ -62,7 +62,7 @@ function getData(){
         month = 1;
         day = 1;
       }
-      apiString = "http://api.weatherapi.com/v1/history.json?key=be3b9fcb975540c2bb4132502240506&q="+cityId+"&dt="+year+"-"+month+"-"+day;
+      apiString = "http://api.weatherapi.com/v1/history.json?key="+apiKey+"&q="+cityId+"&dt="+year+"-"+month+"-"+day;
       $.ajax({
         url: apiString,
         type: "GET",
