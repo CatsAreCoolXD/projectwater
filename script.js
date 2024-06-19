@@ -22,7 +22,7 @@ function definePosition(position){
 var a = 0.01;
 var o = 0;
 function setTexts(prec, dakSize, x){
-  if (true){
+  if (x >= dagen-5){
     output = Math.round(prec*dakSize);
     outputText.innerHTML = "Er valt per jaar " + output + " liter water op jouw dak!";
     bekers = output;
@@ -34,6 +34,8 @@ function setTexts(prec, dakSize, x){
     douchText.innerHTML = "Dat is gemiddeld "+douchen+" uur douchen!";
     wasText.innerHTML = "Dat zijn gemiddeld "+wasmachine+" wasmachine sessies!";
     toiletText.innerHTML = "Dat is gemiddeld "+toilet+" keer je wc doorspoelen!";
+  } else {
+    outputText.innerHTML = "Berekenen...";
   }
 }
 
